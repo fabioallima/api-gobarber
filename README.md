@@ -89,6 +89,31 @@
 ### Instalando e configurando ESLint:
 > yarn add eslint -D
 
+### Instalação Sequelize (ORM) : https://blog.rocketseat.com.br/nodejs-express-sequelize/
+
+> yarn add sequelize
+> yarn add sequelize-cli -D
+
+#### Configuração do Sequelize para utilizar Postgres:
+> yarn add pg pg-hstore
+
+#### Utilizando o sequelize-cli para ajudar a criar as migrations:
+> * yarn sequelize migration:create --name=create-users
+##### ou
+> * npx sequelize migration:create --name=create-users
+##### ou 
+> * node_modules/.bin/sequelize migration:create --name=create-users
+
+#### Rodar Migration:
+> yarn sequelize db:migrate
+
+#### Desfazer última Migration:
+> yarn sequelize db:migrate:undo
+
+#### Desfazer última Migration:
+> yarn sequelize db:migrate:undo:all
+
+
 ### Iniciando ESLint:
 > yarn eslint --init
 ? How would you like to use ESLint? 
