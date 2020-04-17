@@ -1,4 +1,46 @@
 # api-gobarber
+
+## Como executar o projeto?
+
+Criar diretório config dentro do diretório src:
+E dentro de config criar os arquivos:
+
+*`auth.js`*:
+
+```javascript
+export default {
+  secret: *'configurarPalavraSecreta'*,
+  expiresIn: 'TempoDeExpiração',
+};
+```
+
+*`database.js`*:
+
+```javascript
+module.exports = {
+  dialect: 'postgres',
+  host: 'localhost',
+  username: 'username',
+  password: 'password',
+  database: 'database',
+  define: {
+    timestamps: true,
+    underscored: true,
+    underscoredAll: true,
+  },
+};
+```
+
+*`auth.js`*:
+
+```javascript
+export default {
+  secret: *'configurarPalavraSecreta'*,
+  expiresIn: 'TempoDeExpiração',
+};
+```
+
+
 ## Configurar VSCode:
 
 ### Configuração *`settings.json`*:
