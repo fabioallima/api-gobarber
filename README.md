@@ -42,9 +42,9 @@ export default {
 module.exports = {
   dialect: 'postgres',
   host: 'localhost',
-  username: 'username',
-  password: 'password',
-  database: 'database',
+  username: 'postgres',
+  password: 'docker',
+  database: 'gobarber',
   define: {
     timestamps: true,
     underscored: true,
