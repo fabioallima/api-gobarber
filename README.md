@@ -2,8 +2,27 @@
 
 ## Como executar o projeto?
 
-Criar diretório config dentro do diretório src:
-E dentro de config criar os arquivos:
+### Docker:
+
+#### Criar Imagem Docker do PostgresSQL:
+> docker run --name database-postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+#### Listar todos os containers que estão em execução:
+> docker ps
+
+#### Listar todos os containers criados:
+> docker ps -a
+
+#### Parar container em execução:
+> docker stop "nome-container" (ex: database-postgres)
+
+#### Iniciar container novamente:
+> docker start "nome-container" (ex: database-postgres)
+
+#### Ver Logs do Container:
+> docker logs "nome-container" (ex: database-postgres)
+
+Criar diretório config dentro do diretório src e dentro de config criar os arquivos:
 
 *`auth.js`*:
 
@@ -30,16 +49,6 @@ module.exports = {
   },
 };
 ```
-
-*`auth.js`*:
-
-```javascript
-export default {
-  secret: *'configurarPalavraSecreta'*,
-  expiresIn: 'TempoDeExpiração',
-};
-```
-
 
 ## Configurar VSCode:
 
@@ -127,6 +136,9 @@ export default {
 
 ### Multer (Node multipart/form-data):
 > yarn add multer
+
+### Instalando Biblioteca para lidar com datas:
+> yarn add date-fns@next
 
 ### Instalando e configurando ESLint:
 > yarn add eslint -D
