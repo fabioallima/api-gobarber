@@ -7,6 +7,9 @@
 #### Criar Imagem Docker do PostgresSQL:
 > docker run --name database-postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 
+#### Criar Imagem Docker do PostgresSQL:
+> docker run --name mongobarber -p 27017:27017 -d -t mongo
+
 #### Listar todos os containers que estão em execução:
 > docker ps
 
@@ -142,6 +145,10 @@ module.exports = {
 
 ### Instalando e configurando ESLint:
 > yarn add eslint -D
+
+### Instalação Mongoose 
+* Mongoose é uma biblioteca do Nodejs que proporciona uma solução baseada em esquemas para modelar os dados da sua aplicação. Ele fornece um mapeamento de objetos do MongoDB similar ao ORM (Object Relational Mapping), ou ODM (Object Data Mapping) no caso do Mongoose. Isso significa que o Mongoose traduz os dados do banco de dados para objetos JavaScript para que possam ser utilizados por sua aplicação.
+> yarn add mongoose
 
 ### Instalação Sequelize (ORM) : https://blog.rocketseat.com.br/nodejs-express-sequelize/
 

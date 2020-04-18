@@ -6,10 +6,14 @@ import Appointment from '../models/Appointment';
 
 class AppointmentController {
   async index(req, res) {
+    const { page = 1 } = req.query;
+
     const appointments = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
       attributes: ['id', 'date'],
+      limit: 20,
+      offset: (page - 1) * 20,
       include: [{
         model: User,
         as: 'provider',
@@ -70,15 +74,15 @@ class AppointmentController {
       },
     });
 
+    if (checkAvailability) {
+      return res.status(400).json({ error: 'Appointment date is not available' });
+    }
+
     const appointment = await Appointment.create({
       user_id: req.userId,
       provider_id,
       date,
     });
-
-    if (checkAvailability) {
-      return res.status(400).json({ error: 'Appointment date is not available' });
-    }
 
     return res.json(appointment);
   }
