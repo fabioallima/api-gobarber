@@ -31,7 +31,7 @@ Criar diretório config dentro do diretório src e dentro de config criar os arq
 
 ```javascript
 export default {
-  secret: *'configurarPalavraSecreta'*,
+  secret: 'configurarPalavraSecreta',
   expiresIn: 'TempoDeExpiração',
 };
 ```
