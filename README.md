@@ -53,6 +53,23 @@ module.exports = {
 };
 ```
 
+*`mail.js`*:
+
+```javascript
+export default {
+  host: '',
+  port: '',
+  secure: false,
+  auth: {
+    user: '',
+    pass: '',
+  },
+  default: {
+    from: 'Equipe GoBarber <noreply@gobarber.com>',
+  },
+};
+```
+
 ## Configurar VSCode:
 
 ### Configuração *`settings.json`*:
@@ -142,6 +159,9 @@ module.exports = {
 
 ### Instalando Biblioteca para lidar com datas:
 > yarn add date-fns@next
+
+### NodeMailer (Biblioteca para envio de email):
+> yarn add nodemailer
 
 ### Instalando e configurando ESLint:
 > yarn add eslint -D
