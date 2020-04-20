@@ -4,11 +4,14 @@
 
 ### Docker:
 
-#### Criar Imagem Docker do PostgresSQL:
+#### Criar Imagem Docker do PostgresSQL (Banco Relacional):
 > docker run --name database-postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 
-#### Criar Imagem Docker do PostgresSQL:
+#### Criar Imagem Docker do MongoDB (Banco não relacional):
 > docker run --name mongobarber -p 27017:27017 -d -t mongo
+
+#### Criar Imagem Docker do Redis (Banco Chave Valor):
+> docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 
 #### Listar todos os containers que estão em execução:
 > docker ps
@@ -70,6 +73,8 @@ export default {
 };
 ```
 
+Criado os arquivos execute *`yarn`* para baixar as dependências, *`yarn dev`* para executar o projeto e *`yarn queue`* para executar fila de jobs
+
 ## Configurar VSCode:
 
 ### Configuração *`settings.json`*:
@@ -117,6 +122,7 @@ export default {
         "typescriptreact"
     ],
     "files.eol": "\n",
+    "explorer.compactFolders": false,
 }
 ```
 
@@ -162,6 +168,12 @@ export default {
 
 ### NodeMailer (Biblioteca para envio de email):
 > yarn add nodemailer
+
+### Configurando Template de Email:
+> yarn add express-handlebars nodemailer-express-handlebars
+
+### Controle de filas:
+> yarn add bee-queue
 
 ### Instalando e configurando ESLint:
 > yarn add eslint -D
