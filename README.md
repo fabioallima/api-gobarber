@@ -28,50 +28,17 @@
 #### Ver Logs do Container:
 > docker logs "nome-container" (ex: database-postgres)
 
-Criar diretório config dentro do diretório src e dentro de config criar os arquivos:
+#### Site para receber email em desenvolvimento:
 
-*`auth.js`*:
+https://mailtrap.io/
 
-```javascript
-export default {
-  secret: 'configurarPalavraSecreta',
-  expiresIn: 'TempoDeExpiração',
-};
-```
+### Monitoramento de erros - https://sentry.io/
+> yarn add @sentry/node@5.15.4
 
-*`database.js`*:
+Criar conta no site `https://sentry.io`, criar um novo projeto e gerar chave dsn.
 
-```javascript
-module.exports = {
-  dialect: 'postgres',
-  host: 'localhost',
-  username: 'postgres',
-  password: 'docker',
-  database: 'gobarber',
-  define: {
-    timestamps: true,
-    underscored: true,
-    underscoredAll: true,
-  },
-};
-```
 
-*`mail.js`*:
-
-```javascript
-export default {
-  host: '',
-  port: '',
-  secure: false,
-  auth: {
-    user: '',
-    pass: '',
-  },
-  default: {
-    from: 'Equipe GoBarber <noreply@gobarber.com>',
-  },
-};
-```
+Copiar arquivo `.env.example`, preencher as variáveis e alterar o nome para `.env`
 
 Criado os arquivos execute *`yarn`* para baixar as dependências, *`yarn dev`* para executar o projeto e *`yarn queue`* para executar fila de jobs
 
@@ -145,6 +112,7 @@ Criado os arquivos execute *`yarn`* para baixar as dependências, *`yarn dev`* p
 * Rocketseat ReactJS
 * vscode-icons
 * Color Highlight
+* DotENV
 
 
 ## Node.js
@@ -174,6 +142,15 @@ Criado os arquivos execute *`yarn`* para baixar as dependências, *`yarn dev`* p
 
 ### Controle de filas:
 > yarn add bee-queue
+
+### Resolvendo captura de erros no express usando Async:
+> yarn add express-async-errors
+
+### Tratamento de erros:
+> yarn add youch
+
+### Configurando variáveis de ambiente:
+> yarn add dotenv
 
 ### Instalando e configurando ESLint:
 > yarn add eslint -D

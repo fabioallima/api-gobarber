@@ -1,5 +1,3 @@
 node_modules
 tmp/uploads/*
-src/config/*
-!src/config/multer.js
-!src/config/redis.js
+.env
