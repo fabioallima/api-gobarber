@@ -90,6 +90,22 @@ Criado os arquivos execute *`yarn`* para baixar as dependências, *`yarn dev`* p
     ],
     "files.eol": "\n",
     "explorer.compactFolders": false,
+    "material-icon-theme.folders.associations": {
+      "infra": "app",
+      "entities": "class",
+      "schemas": "class",
+      "typeorm": "database",
+      "repositories": "mappings",
+      "http": "container",
+      "migrations": "tools",
+      "modules": "components",
+      "implementations": "core",
+      "dtos": "typescript",
+      "fakes": "mock",
+      "websockets": "pipe",
+      "protos": "pipe",
+      "grpc": "pipe"
+  }
 }
 ```
 
